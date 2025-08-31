@@ -277,14 +277,14 @@
 	const term=document.getElementById('searchGuest').value.toLowerCase()
     for(const g of state.guests){
 	  if(term && !g.name.toLowerCase().includes(term)) continue
-      const chip=document.createElement('div')
-      chip.className='chip'; chip.draggable=true; chip.dataset.guestId=g.id
-      chip.innerHTML=`<span class="name">${g.name}</span><span class="x">✕</span>`
-      chip.addEventListener('dragstart', onGuestDragStart)
-      chip.querySelector('.x').onclick=()=>removeGuest(g.id)
-      list.appendChild(chip)
+      const chip2=document.createElement('div')
+      chip2.className='chip'; chip2.draggable=true; chip2.dataset.guestId=g.id
+      chip2.innerHTML=`<span class="name">${g.name}</span><span class="x">✕</span>`
+      chip2.addEventListener('dragstart', onGuestDragStart)
+      chip2.querySelector('.x').onclick=()=>removeGuest(g.id)
+      list.appendChild(chip2)
       if(!unseatedIds.has(g.id)) continue // só mostra não alocados
-      //const chip = document.createElement('div')
+      const chip = document.createElement('div')
       chip.className = 'chip'
       chip.draggable = true
       chip.dataset.guestId = g.id
