@@ -284,7 +284,7 @@
       chip.querySelector('.x').onclick=()=>removeGuest(g.id)
       list.appendChild(chip)
       if(!unseatedIds.has(g.id)) continue // só mostra não alocados
-      const chip = document.createElement('div')
+      //const chip = document.createElement('div')
       chip.className = 'chip'
       chip.draggable = true
       chip.dataset.guestId = g.id
